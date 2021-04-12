@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.RingtoneDetails.RingtoneDetails">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="Best Tamil Ringtone"
+                android:background="@color/light_sea_green"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <co.mobiwise.library.MusicPlayerView
+                    android:id="@+id/mpv"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="300dp"
+                    app:textSize = "14sp"
+                    android:layout_marginStart="30dp"
+                    app:textColor = "@color/white"
+                    app:buttonColor = "#FF0028"
+                    app:progressLoadedColor = "#00815E"
+                    app:progressEmptyColor = "#20FFFFFF"
+                    app:cover = "@drawable/logo"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:src="@drawable/share1"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="center_horizontal"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="18sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:alpha="0.7"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/gray"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <com.sackcentury.shinebuttonlib.ShineButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@android:color/white"
+                        android:id="@+id/shine_button"
+                        android:layout_marginTop="20dp"
+                        app:btn_color="@android:color/white"
+                        app:btn_fill_color="@android:color/holo_red_dark"
+                        app:allow_random_color="false"
+                        android:layout_gravity="center"
+                        app:siShape="@raw/heart"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Favorite"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="18sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:alpha="0.7"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/gray"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:layout_height="40dp"
+                        android:src="@drawable/flag"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="center_horizontal"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Report"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="18sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/gray">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="15dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/logo"
+                        android:background="@drawable/circular_back"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center_horizontal"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Best Tamil Tones"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="18sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:alpha="0.6"
+                        android:background="@color/black"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <TextView
+                            android:id="@+id/size"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:drawableStart="@drawable/folder"
+                            android:drawablePadding="10dp"
+                            android:layout_height="wrap_content"
+                            android:text="237.54KB"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:textSize="18sp"
+                            android:drawableLeft="@drawable/folder" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:alpha="0.6"
+                            android:layout_height="match_parent"
+                            android:background="@color/black"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:drawableStart="@drawable/audiofile"
+                            android:drawablePadding="10dp"
+                            android:layout_height="wrap_content"
+                            android:text="MP3"
+                            android:layout_marginStart="15dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="15dp"
+                            android:drawableLeft="@drawable/audiofile" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:alpha="0.6"
+                        android:background="@color/black"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+                        <TextView
+                            android:id="@+id/downloads"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:drawableStart="@drawable/download"
+                            android:drawablePadding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:text="237.54KB"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:textSize="18sp"
+                            android:drawableLeft="@drawable/download" />
+                        <View
+                            android:layout_width="1dp"
+                            android:alpha="0.6"
+                            android:layout_height="match_parent"
+                            android:background="@color/black"/>
+                        <TextView
+                            android:id="@+id/duration"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="MP3"
+                            android:drawablePadding="10dp"
+                            android:drawableStart="@drawable/duration"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="15dp"
+                            android:drawableLeft="@drawable/duration" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:alpha="0.6"
+                        android:background="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="4dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Categories :"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="18sp" />
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="8dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="20dp"
+                            app:cardBackgroundColor="@color/dark_slate_gray"
+                            android:layout_marginLeft="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Boys Ringtone"
+                                android:layout_marginStart="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="12dp"
+                                android:gravity="center"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:textSize="18sp" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/gray">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rate This Ringtone"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="15dp" />
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:numStars="5"
+                        android:scaleY="1.1"
+                        android:scaleX="1.1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/gray">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User Rates"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="15dp" />
+                    <LinearLayout
+                        android:layout_marginBottom="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4.6"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="35sp"
+                                android:gravity="center"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Out of 5"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp">
+
+                                <RatingBar
+                                    android:id="@+id/rating_5"
+                                    style="@style/Widget.AppCompat.RatingBar.Small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:isIndicator="true"
+                                    android:numStars="5"
+                                    android:rating="5" />
+
+                                <ProgressBar
+                                    android:id="@+id/progress_5"
+                                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="40dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_toRightOf="@+id/rating_5"
+                                    android:progress="100" />
+                                <TextView
+                                    android:id="@+id/text1"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="5"
+                                    android:textSize="12sp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:gravity="center"/>
+
+                                <RatingBar
+                                    android:id="@+id/rating_4"
+                                    style="@style/Widget.AppCompat.RatingBar.Small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rating_5"
+                                    android:layout_alignRight="@+id/rating_5"
+                                    android:isIndicator="true"
+                                    android:numStars="4"
+                                    android:rating="4" />
+
+                                <ProgressBar
+                                    android:id="@+id/progress_4"
+                                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rating_5"
+                                    android:layout_marginEnd="40dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_toRightOf="@+id/rating_5"
+                                    android:progress="50" />
+
+                                <TextView
+                                    android:id="@+id/text2"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="4"
+                                    android:textSize="12sp"
+                                    android:layout_below="@id/text1"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:gravity="center"/>
+
+                                <RatingBar
+                                    android:id="@+id/rating_3"
+                                    style="@style/Widget.AppCompat.RatingBar.Small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rating_4"
+                                    android:layout_alignRight="@+id/rating_5"
+                                    android:isIndicator="true"
+                                    android:numStars="3"
+                                    android:rating="3" />
+
+                                <ProgressBar
+                                    android:id="@+id/progress_3"
+                                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rating_4"
+                                    android:layout_marginEnd="40dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_toRightOf="@+id/rating_5"
+                                    android:progress="30" />
+
+                                <TextView
+                                    android:id="@+id/text3"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="3"
+                                    android:textSize="12sp"
+                                    android:layout_below="@id/text2"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:gravity="center"/>
+
+                                <RatingBar
+                                    android:id="@+id/rating_2"
+                                    style="@style/Widget.AppCompat.RatingBar.Small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rating_3"
+                                    android:layout_alignRight="@+id/rating_5"
+                                    android:isIndicator="true"
+                                    android:numStars="2"
+                                    android:rating="2" />
+
+                                <ProgressBar
+                                    android:id="@+id/progress_2"
+                                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rating_3"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="40dp"
+                                    android:layout_toRightOf="@+id/rating_5"
+                                    android:progress="20" />
+
+                                <TextView
+                                    android:id="@+id/text4"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="2"
+                                    android:textSize="12sp"
+                                    android:layout_below="@id/text3"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:gravity="center"/>
+
+                                <RatingBar
+                                    android:id="@+id/rating_1"
+                                    style="@style/Widget.AppCompat.RatingBar.Small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rating_2"
+                                    android:layout_alignRight="@+id/rating_5"
+                                    android:isIndicator="true"
+                                    android:numStars="1"
+                                    android:rating="1" />
+
+                                <ProgressBar
+                                    android:id="@+id/progress_1"
+                                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rating_2"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="40dp"
+                                    android:layout_toRightOf="@+id/rating_5"
+                                    android:progress="10" />
+                                <TextView
+                                    android:id="@+id/text5"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="1"
+                                    android:textSize="12sp"
+                                    android:layout_below="@id/text4"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:gravity="center"/>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "456116862849",
+    "project_id": "besttamilringtones-7e13e",
+    "storage_bucket": "besttamilringtones-7e13e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456116862849:android:a791ff623fc95d57a17280",
+        "android_client_info": {
+          "package_name": "best.tamil.ringtonetamilbest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456116862849-eb1ant99572bbft996a8ka2hr8v4ge6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYRT-ThnyfBQRfInWejO6lLe20Bsalqms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456116862849-eb1ant99572bbft996a8ka2hr8v4ge6n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
