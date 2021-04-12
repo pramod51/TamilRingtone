@@ -3,6 +3,7 @@ package best.tamil.ringtonetamilbest;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -13,10 +14,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+
 import best.tamil.ringtonetamilbest.ui.Latest.LatestFragment;
+import best.tamil.ringtonetamilbest.ui.Latest.PapularFragment;
+import best.tamil.ringtonetamilbest.ui.categories.CategoriesFragment;
 
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,14 +34,34 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Fragment selectedFragment = null;
 
-
-
-                return false;
+                switch (item.getItemId()) {
+                    case R.id.nav_latest:
+                        selectedFragment = new LatestFragment();
+                        break;
+                    case R.id.nav_popular:
+                        selectedFragment = new PapularFragment();
+                        Toast.makeText(getApplicationContext(), "Popular Fragment", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_categories:
+                        selectedFragment = new CategoriesFragment();
+                        Toast.makeText(getApplicationContext(), "Categories Fragment", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_favorites:
+                        selectedFragment = new LatestFragment();
+                        Toast.makeText(getApplicationContext(), "Favourites Fragment", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_downloads:
+                        selectedFragment = new LatestFragment();
+                        Toast.makeText(getApplicationContext(), "Downloads Fragment", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        selectedFragment).commit();
+                return true;
             }
         });
-
-
 
 
         // Passing each menu ID as a set of Ids because each
@@ -53,6 +79,41 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_home:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                                 new LatestFragment()).commit();
+                        break;
+                    case R.id.nav_login_register:
+//                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                                new LatestFragment()).commit();
+                        Toast.makeText(getApplicationContext(), "Login Register", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_full_menu:
+//                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                                new LatestFragment()).commit();
+                        Toast.makeText(getApplicationContext(), "Full menu Fragment", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_rate:
+//                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                                new LatestFragment()).commit();
+                        Toast.makeText(getApplicationContext(), "Rate Action", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_share:
+//                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                                new LatestFragment()).commit();
+                        Toast.makeText(getApplicationContext(), "Share Action", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_contact_us:
+//                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                                new LatestFragment()).commit();
+                        Toast.makeText(getApplicationContext(), "Contact Us Fragment", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_privacy:
+//                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                                new LatestFragment()).commit();
+                        Toast.makeText(getApplicationContext(), "Privacy Fragment", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_exit:
+//                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                                new LatestFragment()).commit();
+                        Toast.makeText(getApplicationContext(), "Exit", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 drawer.closeDrawer(GravityCompat.START);

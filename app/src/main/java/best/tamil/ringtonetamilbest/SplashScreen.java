@@ -36,11 +36,12 @@ import static best.tamil.ringtonetamilbest.SQLiteDB.DBHelperLatest.TABEL_NAME;
 public class SplashScreen extends AppCompatActivity {
     StorageReference storageRef = FirebaseStorage.getInstance().getReference().child("Latest");
     DBHelperLatest dbHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        dbHelper=new DBHelperLatest(this);
+        dbHelper = new DBHelperLatest(this);
         //To add data in realtime Latest child from storage
         /*storageRef.listAll().addOnSuccessListener(new OnSuccessListener<ListResult>() {
             @Override
@@ -94,25 +95,25 @@ public class SplashScreen extends AppCompatActivity {
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        SQLiteDatabase db=dbHelper.getReadableDatabase();
-                        String query = "SELECT * FROM "+ TABEL_NAME;
+                        SQLiteDatabase db = dbHelper.getReadableDatabase();
+                        String query = "SELECT * FROM " + TABEL_NAME;
 
-                        for (DataSnapshot ds:snapshot.getChildren()){
-                            Cursor cursor = db.rawQuery(query,null);
-                            boolean isThere=false;
-                            while (cursor.moveToNext()){
+                        for (DataSnapshot ds : snapshot.getChildren()) {
+                            Cursor cursor = db.rawQuery(query, null);
+                            boolean isThere = false;
+                            while (cursor.moveToNext()) {
                                 if (cursor.getString(cursor.getColumnIndex(CHILD_KEY)).equals(ds.getKey())) {
-                                    isThere=true;
+                                    isThere = true;
                                     break;
                                 }
                             }
                             if (!isThere)
-                            dbHelper.insertLatestRingtone(ds.getKey(),ds.child("Title").getValue(String.class),String.valueOf(ds.child("Duration").getValue(Integer.class)),ds.child("Url").getValue(String.class),
-                                    String.valueOf(ds.child("DownloadCount").getValue(Integer.class)),"No",String.valueOf(ds.child("Size").getValue(Integer.class))
-                            ,String.valueOf(ds.child("Ratings").getValue(Integer.class)));
+                                dbHelper.insertLatestRingtone(ds.getKey(), ds.child("Title").getValue(String.class), String.valueOf(ds.child("Duration").getValue(Integer.class)), ds.child("Url").getValue(String.class),
+                                        String.valueOf(ds.child("DownloadCount").getValue(Integer.class)), "No", String.valueOf(ds.child("Size").getValue(Integer.class))
+                                        , String.valueOf(ds.child("Ratings").getValue(Integer.class)));
 
                         }
-                        startActivity(new Intent(SplashScreen.this,MainActivity.class));
+                        startActivity(new Intent(SplashScreen.this, MainActivity.class));
                     }
 
                     @Override
@@ -120,9 +121,6 @@ public class SplashScreen extends AppCompatActivity {
 
                     }
                 });
-
-
-
 
 
     }

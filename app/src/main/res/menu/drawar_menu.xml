@@ -1,27 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-
     tools:showIn="navigation_view">
+
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/home"
+            android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
+        <item
+            android:id="@+id/nav_login_register"
+            android:icon="@drawable/login"
+            android:title="Login / Register" />
         <item
             android:id="@+id/nav_full_menu"
             android:icon="@drawable/setting"
-            android:title="Full Menu"/>
-
+            android:title="Full Menu" />
     </group>
+
     <item android:title="Communicate">
         <menu>
             <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/ic_baseline_thumb_up_24"
+                android:title="Rate" />
+            <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/contact_us"
+                android:icon="@drawable/ic_baseline_share_24"
                 android:title="Share" />
 
+            <item
+                android:id="@+id/nav_contact_us"
+                android:icon="@drawable/ic_baseline_chat_bubble_24"
+                android:title="Contact us" />
+            <item
+                android:id="@+id/nav_privacy"
+                android:icon="@drawable/ic_baseline_lock_24"
+                android:title="Privacy Policy" />
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/ic_baseline_exit_to_app_24"
+                android:title="Exit" />
         </menu>
     </item>
-
 </menu>
