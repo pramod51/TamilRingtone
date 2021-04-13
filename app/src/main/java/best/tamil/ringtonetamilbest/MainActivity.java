@@ -1,11 +1,15 @@
 package best.tamil.ringtonetamilbest;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
@@ -83,6 +87,20 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_login_register:
 //                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
 //                                new LatestFragment()).commit();
+
+//                        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getApplicationContext());
+//                        View view = LayoutInflater.from(getApplicationContext()).inflate(R.layout.login_register_bottomsheet, holder.linearLayout);
+//                        bottomSheetDialog.setContentView(view);
+//                        bottomSheetDialog.show();
+//
+//                        /*initilize xml object and then do oprations on that */
+//
+//                        Button submit = view.findViewById(R.id.submit);
+//
+//                        //for dismis bottomsheet
+//                        bottomSheetDialog.dismiss();
+
+
                         Toast.makeText(getApplicationContext(), "Login Register", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_full_menu:
